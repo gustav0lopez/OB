@@ -1,11 +1,8 @@
-import java.rmi.server.SocketSecurityException;
-
-import javax.sound.sampled.SourceDataLine;
-
 public class main{
 
     public static void main (String[] args){
         System.out.println(suma(1,5,7));
+        
         coche miCoche = new coche();
         miCoche.addPuerta();
         System.out.println(miCoche.puertas);
@@ -60,6 +57,15 @@ public class main{
             break;
             default: System.out.println("No es una estación");
         }
+
+        System.out.println("#Ejercicios Privacidad, abstracción y encapsulación#");
+        System.out.println("#####");
+
+        persona humano = new persona();
+        humano.setEdad(35);
+        humano.setNombre("Gustavo");
+        humano.setTelefono(123456789);
+        System.out.println("Edad de "+humano.getNombre()+" es de "+humano.getEdad()+ " y su teléfono es " + humano.getTelefono());
     }
 
      public static int suma(int a, int b, int c) {
@@ -72,6 +78,33 @@ class coche {
     public void addPuerta(){
         this.puertas++;
     }
+//Ejercicios de: Privacidad, abstracción y encapsulación 
+}
+class persona {
+    private int edad;
+    private String nombre;
+    private int telefono;
+
+    public void setEdad (int edad){
+        this.edad = edad ;
+    }
+    public int getEdad (){
+        return edad;
+    }
+    public void setNombre (String nombre){
+        this.nombre = nombre;
+    }
+    public String getNombre (){
+        return nombre;
+    }
+    public void setTelefono (int telefono){
+        this.telefono = telefono;
+    }
+    public int getTelefono (){
+        return telefono;
+    }
+
+
+}
 
     
-}
