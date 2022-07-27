@@ -66,6 +66,22 @@ public class main{
         humano.setNombre("Gustavo");
         humano.setTelefono(123456789);
         System.out.println("Edad de "+humano.getNombre()+" es de "+humano.getEdad()+ " y su teléfono es " + humano.getTelefono());
+
+        System.out.println("########## TEMA 9 ####################");
+
+        cliente cliente = new cliente();
+        cliente.setNombre("Gustavo Cliente");
+        cliente.setEdad(35);
+        cliente.setTelefono(123456);
+        cliente.setCredito("aprobado");
+        System.out.println("Nombre: "+cliente.getNombre()+" Edad:"+cliente.getEdad()+ "Teléfono: "+cliente.getTelefono()+" Credito: "+cliente.getCredito());
+
+        trabajador trabajador = new trabajador();
+        trabajador.setNombre("Gustavo Cliente");
+        trabajador.setEdad(35);
+        trabajador.setTelefono(123456);
+        trabajador.setSalario(123);
+        System.out.println("Nombre: "+trabajador.getNombre()+" Edad:"+trabajador.getEdad()+ "Teléfono: "+trabajador.getTelefono()+" Salario "+trabajador.getSalario());
     }
 
      public static int suma(int a, int b, int c) {
@@ -106,5 +122,31 @@ class persona {
 
 
 }
+
+// Tema 9
+
+class cliente extends persona {
+    String credito;
+
+    public void setCredito(String credito){
+        this.credito=credito;
+    }
+    public String getCredito(){
+        return credito;
+    }
+
+}
+
+class trabajador extends persona {
+    int salario;
+
+    public void setSalario(int salario){
+        this.salario = salario;
+    }
+    public int getSalario(){
+        return salario;
+    }
+}
+
 
     
